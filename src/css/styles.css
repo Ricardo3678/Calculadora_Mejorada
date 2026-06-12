@@ -1,0 +1,94 @@
+.calc-display{ /* estilos para la pantalla de la calculadora */
+  font-size:1.5rem;
+  height:3.2rem;
+  padding:.4rem .75rem;
+}
+
+.calc-display:focus{ /* estilos para la pantalla de la calculadora cuando está enfocada */
+  outline:none;
+  box-shadow:0 0 5px rgba(0,123,255,.5);
+}
+
+.calc-container{ /* estilos para el contenedor de la calculadora */
+  max-width:400px;
+  margin:auto;
+}
+
+.calc-panel { /* estilos para el panel de la calculadora */
+  background-color: #f0f0f0;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.button-grid { /* estilos para la cuadrícula de botones de la calculadora */
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.button-grid button { /* estilos para los botones de la calculadora */
+  min-height: 3.5rem;
+  font-size: 1.1rem;
+  border-radius: 0.75rem;
+  padding: 0.75rem 0;
+}
+
+.button-grid button.btn-zero { /* estilos para el botón de cero, que ocupa dos columnas */
+  grid-column: span 2;
+}
+
+.button-grid button.btn-add { /* estilos para el botón de suma, que ocupa la última columna */
+  grid-column: 4;
+}
+
+.calculator-layout { /* estilos para el diseño general de la calculadora y el panel del historial */
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 1rem;
+  align-items: start;
+}
+
+.history-panel { /* estilos para el panel lateral del historial de cálculos */
+  display: none;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.history-panel.visible { /* estilos para mostrar el panel lateral del historial de cálculos */
+  display: block;
+}
+
+.history-panel h2 { /* estilos para el título del panel lateral del historial de cálculos */
+  margin-top: 0;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.history-note { /* estilos para la nota debajo del título del panel lateral del historial de cálculos */
+  margin: 0 0 1rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.history-list { /* estilos para la lista del historial de cálculos */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.history-list li { /* estilos para cada elemento de la lista del historial de cálculos */
+  padding: 0.75rem;
+  border-radius: 0.65rem;
+  background-color: #f8f9fa;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.history-list li:last-child { /* estilos para el último elemento de la lista del historial de cálculos, para eliminar el margen inferior */
+  margin-bottom: 0;
+}
